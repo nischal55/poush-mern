@@ -211,3 +211,15 @@ for(todo of todos){
    console.log(`${todo.title} is ${todo.statusOfTodo}`)
    console.log(`${todo.title} is created at ${todo.createdAt} is ${todo.statusOfTodo}`)
 }
+
+
+
+
+
+//function 
+const double = (num1) =>{
+    console.log(`2*${num1}=${2*num1}`);
+}
+
+double(2);
+double(6);
