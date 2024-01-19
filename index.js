@@ -223,3 +223,27 @@ const double = (num1) =>{
 
 double(2);
 double(6);
+
+
+const sum = (a,b)=>{
+    console.log(`${a}+${b}=${a+b}`);
+    
+}
+
+sum(4,5)
+
+
+function addNumbers() {
+    let sum_args = 0;
+    for (let i = 0; i < arguments.length; i++) {
+        if (typeof arguments[i] === 'number') {
+            sum_args += arguments[i];
+        }
+    }
+
+    return sum_args;
+}
+
+
+let result = addNumbers(1, 2, 3, 4, 5);
+console.log(`The sum is ${result}`);
