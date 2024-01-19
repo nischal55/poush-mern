@@ -247,3 +247,55 @@ function addNumbers() {
 
 let result = addNumbers(1, 2, 3, 4, 5);
 console.log(`The sum is ${result}`);
+
+
+function diffNumbers() {
+    let diff_args = 0;
+    for (let i = 1; i < arguments.length; i++) {
+        if (typeof arguments[i] === 'number') {
+            diff_args = arguments[0];
+            diff_args -= arguments[i];
+        }
+    }
+
+    return diff_args;
+}
+
+
+let diffOfNumbers = diffNumbers(10, 2, 3);
+console.log(`The diff is ${diffOfNumbers}`);
+
+
+
+let arr = "Exploring tomorrow : 2024-01-02";
+
+console.log(arr.substring(20,31))
+
+
+
+let blogs = [
+    {
+      title:
+        "Exploring Tomorrow",
+      created_at: "2024-01-19T13:01:03.486205+05:45",
+    },
+    {
+      title:
+        "Career in Web ",
+      created_at: "2024-01-18T15:02:21.353832+05:45",
+    },
+    {
+      title:
+        "Degrees Dying",
+      created_at: "2024-01-16T14:06:24.457394+05:45",
+    },
+    {
+      title:
+        "Career in Digital Marketing",
+      created_at: "2024-01-17T11:02:40.936608+05:45",
+    },
+  ];
+
+  for(blog of blogs){
+    console.log(blog.created_at.substring(0,10))
+  }
