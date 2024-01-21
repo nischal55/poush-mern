@@ -296,6 +296,35 @@ let blogs = [
     },
   ];
 
-  for(blog of blogs){
-    console.log(blog.created_at.substring(0,10))
-  }
+function getCreatedDate(index){
+    console.log(`${blogs[index].title} : ${blogs[index].created_at.substring(0,10)}`)
+}
+getCreatedDate(0)
+getCreatedDate(1)
+getCreatedDate(2)
+getCreatedDate(3)
+
+
+
+let members = [
+    {
+      name: "Ram",
+      joined_at: "2024-01-19T13:01:03.486205+05:45",
+    },
+    {
+      name: "Hari",
+      joined_at: "2024-01-18T15:02:21.353832+05:45",
+    },
+    {
+      name: "Sita",
+      joined_at: "2024-01-17T14:06:24.457394+05:45",
+    }
+  ];
+
+  function getMemberJoinDate(memberIndex){
+    console.log(`${members[memberIndex].name} joined at : ${members[memberIndex].joined_at.substring(0,10)}`)
+}
+
+getMemberJoinDate(0)
+getMemberJoinDate(1)
+getMemberJoinDate(2)
