@@ -304,6 +304,10 @@ getCreatedDate(1)
 getCreatedDate(2)
 getCreatedDate(3)
 
+const getDate = (date) =>{
+    return date.substring(0,10)
+}
+
 
 
 let members = [
@@ -322,9 +326,14 @@ let members = [
   ];
 
   function getMemberJoinDate(memberIndex){
-    console.log(`${members[memberIndex].name} joined at : ${members[memberIndex].joined_at.substring(0,10)}`)
+    console.log(`${members[memberIndex].name} joined at : ${getDate(members[memberIndex].joined_at)}`)
 }
 
 getMemberJoinDate(0)
 getMemberJoinDate(1)
 getMemberJoinDate(2)
+
+members.map((memberDetails)=>{
+    let {name, joined_at} = memberDetails
+    console.log(`${name} joined at : ${getDate(joined_at)}`)
+})
