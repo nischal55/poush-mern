@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form onsubmit="addTodo()" id="form_id">
+        <input type="text"  id="todosName" required>
+        <input type="submit" value="Add">
+    </form>
+
+    <div>
+        <ul id="todoList">
+           
+        </ul>
+
+    </div>
+
+
+    <script>
+        let todosListArray = [];
+        const addTodo=(e)=>{
+            event.preventDefault();
+            let todoList = document.getElementById("todoList");
+            let todosName = document.getElementById("todosName").value;
+            todosListArray.push(todosName);
+            console.log(todosListArray);
+            convertToList();
+            document.getElementById("form_id").reset();
+        }
+
+
+        function convertToList(){
+            let outputList = "";
+            todosListArray.forEach((element,index)=>{
+                outputList += `<li>${element}</li> <button id="btnDelete" onclick='deleteElement(${index})'>Delete</button>`;
+                todoList.innerHTML=outputList;
+            })
+        }
+
+        function deleteElement(arrayIndex){
+            console.log(arrayIndex)
+            todosListArray.splice(arrayIndex,arrayIndex)
+            convertToList();
+        }
+
+
+    </script>
+</body>
+</html>
